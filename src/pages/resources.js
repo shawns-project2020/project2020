@@ -1,15 +1,13 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from '../components/Layout/Layout';
+import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 
 const ResourcesPage = () => {
-	const resources = useStaticQuery(graphql`
+  const resources = useStaticQuery(graphql`
     query ResourceFiles {
-      allFile(
-        filter: { sourceInstanceName: { eq: "resources" } }
-      ) {
+      allFile(filter: { sourceInstanceName: { eq: "resources" } }) {
         edges {
           node {
             id
@@ -24,14 +22,17 @@ const ResourcesPage = () => {
   return (
     <Layout>
       <SEO title="Resources" />
-      <h1>Resources</h1>
-      {resources.allFile.edges.map(({ node }) => (
-        <div key={node.id}>
-          <a href={`content/resources/${node.relativePath}`} download>{node.relativePath} {node.prettySize}</a>
-        </div>
-      ))}
+      <div className="container">
+        <h1>Resources</h1>
+        {resources.allFile.edges.map(({ node }) => (
+          <div key={node.id}>
+            <a href={`content/resources/${node.relativePath}`} download>
+              {node.relativePath} {node.prettySize}
+            </a>
+          </div>
+        ))}
+      </div>
     </Layout>
-	  
   )
 }
 

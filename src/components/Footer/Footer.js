@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react"
 
-import style from './Footer.module.css';
+import style from "./Footer.module.css"
 
 const Footer = () => {
-	return (
-		<footer className={style.footer} >
-			<span>shawn.project2020@gmail.com</span>
-		</footer>
-	)
+  return (
+    <footer className={style.footer}>
+      <a href="mailto:shawns.project2020@gmail.com">
+        shawns.project2020@gmail.com
+      </a>
+    </footer>
+  )
 }
 
-export default Footer;
+export default Footer

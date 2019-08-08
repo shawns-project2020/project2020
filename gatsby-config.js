@@ -23,8 +23,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `bible-classes`,
-        path: `${__dirname}/static/content/bible-classes`,
+        name: `darkness-to-light`,
+        path: `${__dirname}/static/content/bible-classes/darkness-to-light`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `come-and-see`,
+        path: `${__dirname}/static/content/bible-classes/come-and-see`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `eyeing-2nd-peter`,
+        path: `${__dirname}/static/content/bible-classes/eyeing-2nd-peter`,
       },
     },
     {
@@ -46,13 +60,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Project 2020`,
+        short_name: `Project 2020`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#0a0abc`,
+        theme_color: `#0a0abc`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/project2020-with-background.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
