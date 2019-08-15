@@ -7,29 +7,53 @@ export default ({ opened }) => {
   return (
     <nav className={opened ? `${styles.nav} ${styles.navToggled}` : styles.nav}>
       <ul>
-        <Link className="no-style" to="/contact">
+        <Link className="no-style" to="/">
           <li>
-            <span>contact</span>
+            <div className="container">
+              <span>Home</span>
+            </div>
           </li>
         </Link>
-        <Link className="no-style" to="/articles">
+        <Link className="no-style" to="/about">
           <li>
-            <span>articles</span>
+            <div className="container">
+              <span>About Project2020 Enlightening the Eyes</span>
+            </div>
           </li>
         </Link>
         <Link className="no-style" to="/bible-class-material">
           <li>
-            <span>class material</span>
+            <div className="container">
+              <span>Bible Class Material</span>
+            </div>
+          </li>
+        </Link>
+        <Link className="no-style" to="/articles">
+          <li>
+            <div className="container">
+              <span>Articles</span>
+            </div>
           </li>
         </Link>
         <Link className="no-style" to="/sermon-material">
           <li>
-            <span>sermon material</span>
+            <div className="container">
+              <span>Preacher Material</span>
+            </div>
           </li>
         </Link>
         <Link className="no-style" to="/resources">
           <li>
-            <span>resources</span>
+            <div className="container">
+              <span>Resources</span>
+            </div>
+          </li>
+        </Link>
+        <Link className="no-style" to="/contact">
+          <li>
+            <div className="container">
+              <span>Contact</span>
+            </div>
           </li>
         </Link>
       </ul>

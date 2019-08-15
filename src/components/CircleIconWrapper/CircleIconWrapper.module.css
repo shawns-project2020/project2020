@@ -1,0 +1,11 @@
+.circle {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--primary-color);
+  background-color: var(--light-accent-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  padding: 0.5em;
+  line-height: 0;
+  width: fit-content;
+}

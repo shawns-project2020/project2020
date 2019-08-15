@@ -46,7 +46,10 @@ const Header = ({ siteTitle }) => {
       <div className={`container ${styles.headerGroup}`}>
         <Link className={`no-style ${styles.iconTitle}`} to="/">
           <img height="60" src={glassesIcon} alt="glasses" />
-          <h1 className={styles.title}>{siteTitle}</h1>
+          <h1 className={styles.title}>
+            {siteTitle}
+            <span className={styles.titleAccent}> Enlightening the Eyes</span>
+          </h1>
         </Link>
         <button className="no-style" onClick={toggleNavigation}>
           <FaBars className={styles.navIcon} />

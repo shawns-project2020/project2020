@@ -3,43 +3,26 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition-duration: 250ms;
+  padding: 0;
+}
+
+.navToggled {
+  max-height: calc(52px * 7);
 }
 
 .nav ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 100%;
 }
 
 .nav li {
-  padding: var(--spacing-unit);
-}
-
-.nav li a {
-  width: fit-content;
-}
-
-@media only screen and (max-width: 1024px) {
-  .nav {
-    max-height: 0;
-    width: 100%;
-    overflow: hidden;
-    transition-duration: 250ms;
-    padding: 0;
-  }
-
-  .navToggled {
-    max-height: calc(52px * 5);
-  }
-
-  .nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav li {
-    border-top: 2px solid var(--border-color);
-    padding: calc(2 * var(--spacing-unit));
-    padding-left: calc(3 * var(--spacing-unit));
-    width: 100%;
-  }
+  border-top: 2px solid var(--border-color);
+  padding: calc(2 * var(--spacing-unit));
+  padding-left: calc(3 * var(--spacing-unit));
+  width: 100%;
 }

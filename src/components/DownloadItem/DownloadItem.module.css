@@ -1,0 +1,12 @@
+.downloadItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: var(--spacing-unit);
+  padding-bottom: var(--spacing-unit);
+}
+
+.text {
+  margin-right: var(--spacing-unit);
+}
