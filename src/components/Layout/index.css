@@ -71,6 +71,10 @@ nav ul {
 
 /* Utility */
 
+.accent {
+  color: var(--primary-color);
+}
+
 .no-style,
 .no-style:hover {
   text-decoration: none;

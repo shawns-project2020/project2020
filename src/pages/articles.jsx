@@ -20,11 +20,8 @@ const ArticlePage = () => {
     }
   `)
 
-  console.log(results)
-
   const articles = results.allFile.edges
     .map(({ node }) => {
-      // const regex = /[A-Z0-9]*\s(.*)by(.*)\.(docx|doc)/
       const regex = /A([\d]*)[A-Z]?\s(.*)by(.*)\.(docx|doc)/
       const matches = node.relativePath.match(regex)
       const articleDataItem = {
