@@ -13,7 +13,6 @@ const ArticlePage = () => {
           node {
             id
             relativePath
-            prettySize
           }
         }
       }
@@ -29,7 +28,6 @@ const ArticlePage = () => {
         number: parseInt(matches[1]),
         name: matches[2],
         author: matches[3],
-        size: node.prettySize,
         id: node.id,
       }
       return articleDataItem

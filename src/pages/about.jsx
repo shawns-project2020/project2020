@@ -104,9 +104,6 @@ const ArticlePage = () => {
               Satan&#39;s darkness and enlighten their eyes of understanding to
               the hope of Christ&#39;s calling?
             </p>
-            <p>
-              <Link to="/">Home</Link>
-            </p>
           </div>
         </section>
       </div>

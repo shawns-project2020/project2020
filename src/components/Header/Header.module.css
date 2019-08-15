@@ -33,13 +33,20 @@
   margin-right: calc(2 * var(--spacing-unit));
 }
 
+.fullTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
 .title {
   font-size: 1.5em;
   margin: 0;
+  margin-right: var(--spacing-unit);
 }
 
 .titleAccent {
-  font-size: 0.75em;
+  font-size: 1em;
   color: var(--secondary-text-color);
   font-weight: 200;
 }

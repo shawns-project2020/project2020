@@ -1,91 +1,51 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
+
+import { FaArrowCircleRight } from "react-icons/fa"
 
 const BibleClassMaterialPage = () => {
-  const darknessToLightName = "darkness-to-light"
-  const comeAndSeeName = "come-and-see"
-  const eyeingSecondPeterName = "eyeing-2nd-peter"
-
-  const results = useStaticQuery(graphql`
-    query EyeingSecondPeterMaterialFiles {
-      allFile(
-        filter: {
-          sourceInstanceName: {
-            regex: "/darkness-to-light|come-and-see|eyeing-2nd-peter/"
-          }
-        }
-      ) {
-        edges {
-          node {
-            sourceInstanceName
-            id
-            relativePath
-            prettySize
-          }
-        }
-      }
-    }
-  `)
-
-  const classMaterial = results.allFile.edges
-
-  const darknessToLightMaterial = classMaterial.filter(
-    ({ node }) => node.sourceInstanceName === darknessToLightName
-  )
-  const comeAndSeeMaterial = classMaterial.filter(
-    ({ node }) => node.sourceInstanceName === comeAndSeeName
-  )
-  const eyeingSecondPeterMaterial = classMaterial.filter(
-    ({ node }) => node.sourceInstanceName === eyeingSecondPeterName
-  )
-
   return (
     <Layout>
       <SEO title="Class Material" />
-      <div className="container">
-        <h1>Class Material</h1>
-        <p>
-          Please feel free to use any of this material to help with teaching in
-          a classroom setting.
-        </p>
-        <h2>Darkness to Light</h2>
-        {darknessToLightMaterial.map(({ node }) => (
-          <div key={node.id}>
-            <a
-              href={`content/bible-classes/${darknessToLightName}/${node.relativePath}`}
-              download
-            >
-              {node.relativePath} {node.prettySize}
-            </a>
+      <div className="sectioned-page">
+        <section>
+          <div className="container">
+            <h1>Class Material</h1>
+            <p>
+              Please feel free to use any of this material to help with teaching
+              in a classroom setting.
+            </p>
           </div>
-        ))}
-        <h2>Come and See</h2>
-        {comeAndSeeMaterial.map(({ node }) => (
-          <div key={node.id}>
-            <a
-              href={`content/bible-classes/${comeAndSeeName}/${node.relativePath}`}
-              download
-            >
-              {node.relativePath} {node.prettySize}
-            </a>
+        </section>
+        <section>
+          <div className="container">
+            <h2>Darkness to Light</h2>
+            <p>50 Lessons in Two Parts (512 pages)</p>
+            <p>50 Powerpoints</p>
+            <p>Various Authors</p>
+            <Link to="/darkness-to-light">
+              Click to see overview and download page
+            </Link>
           </div>
-        ))}
-        <h2>
-          Eyeing 2<sup>nd</sup> Peter
-        </h2>
-        {eyeingSecondPeterMaterial.map(({ node }) => (
-          <div key={node.id}>
-            <a
-              href={`content/bible-classes/${eyeingSecondPeterName}/${node.relativePath}`}
-              download
-            >
-              {node.relativePath} {node.prettySize}
-            </a>
+        </section>
+        <section>
+          <div className="container">
+            <h2>Come and See</h2>
+            <p>A Study in the Gospel of John</p>
+            <p>12 lessons by Alan Piner</p>
+            <Link to="/come-and-see">Click to see download page</Link>
           </div>
-        ))}
+        </section>
+        <section>
+          <div className="container">
+            <h2>Eyeing 2 Peter</h2>
+            <p>12 Lessons from 2 Peter</p>
+            <Link to="/eyeing-2-peter">Click to see download page</Link>
+          </div>
+        </section>
       </div>
     </Layout>
   )
