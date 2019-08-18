@@ -7,7 +7,7 @@
 
   --white-text-color: #fafafa;
   --primary-text-color: #222222;
-  --secondary-text-color: #424242;
+  --secondary-text-color: #727272;
 
   --border-color: #dfdede;
 
@@ -72,7 +72,7 @@ nav ul {
 /* Utility */
 
 .accent {
-  color: var(--primary-color);
+  color: var(--secondary-text-color);
 }
 
 .no-style,

@@ -78,20 +78,32 @@ export default () => {
   return (
     <Layout>
       <SEO title="Darkness to Light"></SEO>
-      <div className="container">
-        <h1>Darkness To Light</h1>
-        <h2 style={{ fontWeight: 200 }}>PDFs</h2>
-        {pdfData.map(pdf => (
-          <DownloadItem key={pdf.id} {...pdf}></DownloadItem>
-        ))}
-        <h2 style={{ fontWeight: 200 }}>Darkness</h2>
-        {darknessData.map(darkness => (
-          <DownloadItem key={darkness.id} {...darkness}></DownloadItem>
-        ))}
-        <h2 style={{ fontWeight: 200 }}>Light</h2>
-        {lightData.map(light => (
-          <DownloadItem key={light.id} {...light}></DownloadItem>
-        ))}
+      <div className="sectioned-page">
+        <section>
+          <div className="container">
+            <h1>Darkness To Light</h1>
+            <h2 style={{ fontWeight: 200 }}>PDFs</h2>
+            {pdfData.map(pdf => (
+              <DownloadItem key={pdf.id} {...pdf}></DownloadItem>
+            ))}
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <h2 style={{ fontWeight: 200 }}>Darkness</h2>
+            {darknessData.map(darkness => (
+              <DownloadItem key={darkness.id} {...darkness}></DownloadItem>
+            ))}
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <h2 style={{ fontWeight: 200 }}>Light</h2>
+            {lightData.map(light => (
+              <DownloadItem key={light.id} {...light}></DownloadItem>
+            ))}
+          </div>
+        </section>
       </div>
     </Layout>
   )

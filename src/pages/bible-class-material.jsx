@@ -4,8 +4,6 @@ import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
 
-import { FaArrowCircleRight } from "react-icons/fa"
-
 const BibleClassMaterialPage = () => {
   return (
     <Layout>

@@ -1,0 +1,19 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--spacing-unit);
+}
+
+.searchBar > input {
+  border: none;
+  margin-left: var(--spacing-unit);
+  flex: 1;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+.searchBar > svg {
+  color: var(--secondary-text-color);
+}
