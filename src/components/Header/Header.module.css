@@ -1,4 +1,25 @@
-@import "../Layout/index.css";
+:root {
+  /* TODO: figure out how to get css custom properties to work in css modules */
+  /* Color */
+  --primary-color: #0a0abc;
+  --secondary-color: #0052cc;
+  --dark-accent-color: #98c1ff;
+  --light-accent-color: #deebff;
+
+  --white-text-color: #fafafa;
+  --primary-text-color: #222222;
+  --secondary-text-color: #727272;
+
+  --border-color: #dfdede;
+
+  --primary-background-color: #f8f8f8;
+  --secondary-background-color: #aaaaaa;
+
+  /* Structure */
+  --header-height: 60px;
+  --footer-height: 60px;
+  --spacing-unit: 8px;
+}
 
 .header {
   display: block;
