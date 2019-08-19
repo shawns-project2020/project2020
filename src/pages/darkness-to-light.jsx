@@ -34,6 +34,9 @@ export default () => {
       }
       return articleDataItem
     })
+    .sort((a, b) => {
+      return a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+    })
 
   // Darkness
   const darknessData = results.allFile.edges
@@ -82,6 +85,13 @@ export default () => {
         <section>
           <div className="container">
             <h1>Darkness To Light</h1>
+            <p>
+              Below are files for the "Darkness to Light" series. Please note
+              the 2 PDF files contain 25 lessons each. Part 1 is for "Darkness"
+              and part 2 is for "Light." Beneath the PDFs are PowerPoints for
+              each lesson. Please feel free to use any of this material for your
+              bible studies.
+            </p>
             <h2 style={{ fontWeight: 200 }}>PDFs</h2>
             {pdfData.map(pdf => (
               <DownloadItem key={pdf.id} {...pdf}></DownloadItem>
