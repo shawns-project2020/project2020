@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa"
 import Navigation from "../Navigation/Navigation"
 
 import styles from "./Header.module.css"
-import glassesIcon from "../../images/project2020-big.svg"
+import glassesIcon from "../../images/P2020_LOGO_transparent.jpg"
 
 const Header = ({ siteTitle }) => {
   let [opened, setOpened] = useState(false)
