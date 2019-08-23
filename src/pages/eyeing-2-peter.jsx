@@ -22,13 +22,15 @@ export default () => {
 
   const pathToFiles = "content/bible-classes/darkness-to-light/"
 
-  const fileData = results.allFile.edges.map(({ node }) => {
-    return {
-      href: `${pathToFiles}${node.relativePath}`,
-      name: node.name,
-      id: node.id,
-    }
-  })
+  const fileData = results.allFile.edges
+    .map(({ node }) => {
+      return {
+        href: `${pathToFiles}${node.relativePath}`,
+        name: node.name,
+        id: node.id,
+      }
+    })
+    .filter(d => d.name.includes("delete-me") === false)
 
   return (
     <Layout>
