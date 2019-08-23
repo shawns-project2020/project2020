@@ -2,16 +2,7 @@ import React from "react"
 
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
-import CircleIconWrapper from "../components/CircleIconWrapper/CircleIconWrapper"
 
-import {
-  FaQuestion,
-  FaBook,
-  FaBookOpen,
-  FaFile,
-  FaUser,
-  FaPaperclip,
-} from "react-icons/fa"
 import { Link } from "gatsby"
 
 const IndexPage = () => (
@@ -22,8 +13,8 @@ const IndexPage = () => (
         <div className="container">
           <h1>Welcome!</h1>
           <p>
-            Please make use of this bible material base on vision related bible
-            topics. You can find various material for bible classes, articles,
+            Please make use of this Bible material base on vision related Bible
+            topics. You can find various material for Bible classes, articles,
             preaching material, and other resources.
           </p>
         </div>
@@ -41,8 +32,16 @@ const IndexPage = () => (
       <section>
         <div className="container">
           <h2>Bible Class Material</h2>
-          Download bible class material{" "}
-          <Link to="/bible-class-material">here</Link>
+          <p>
+            Download Bible class material{" "}
+            <Link to="/bible-class-material">here</Link>
+          </p>
+          <blockquote>
+            Please consider looking into using our{" "}
+            <Link to="/darkness-to-life">"From Darkness to Light"</Link>{" "}
+            material" in your adult bible class. There are many PowerPoints and
+            lessons for you to utilize.
+          </blockquote>
         </div>
       </section>
       <section>
@@ -54,7 +53,7 @@ const IndexPage = () => (
       <section>
         <div className="container">
           <h2>Preacher Material</h2>
-          Download preaching material <Link to="/sermon-material">here</Link>
+          Download preaching material <Link to="/preacher-material">here</Link>
         </div>
       </section>
       <section>

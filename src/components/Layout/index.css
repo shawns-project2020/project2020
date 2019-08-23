@@ -50,6 +50,14 @@ body > * {
   height: 100%;
 }
 
+blockquote {
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 0 4px 4px 0;
+  background-color: var(--light-accent-color);
+  padding: calc(var(--spacing-unit) * 3);
+  margin-left: 0;
+}
+
 a {
   background-color: var(--light-accent-color);
   text-decoration: none;

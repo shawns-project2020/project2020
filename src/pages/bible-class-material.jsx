@@ -20,7 +20,7 @@ const BibleClassMaterialPage = () => {
         </section>
         <section>
           <div className="container">
-            <h2>Darkness to Light</h2>
+            <h2>From Darkness to Light</h2>
             <p>50 Lessons in Two Parts (512 pages)</p>
             <p>50 Powerpoints</p>
             <p>Various Authors</p>

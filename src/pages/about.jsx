@@ -60,7 +60,7 @@ const ArticlePage = () => {
             <h2>Section 3 Preachers' Share Sermons</h2>
             <p>
               Section 3{" "}
-              <Link to="sermon-material">PREACHERS' SHARED SERMONS</Link>{" "}
+              <Link to="preacher-material">PREACHERS' SHARED SERMONS</Link>{" "}
               includes lesson that have been shared from preachers that might be
               of interest on this topic area of eyes and vision.
             </p>

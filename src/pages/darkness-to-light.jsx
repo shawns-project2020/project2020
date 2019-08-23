@@ -80,17 +80,17 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Darkness to Light"></SEO>
+      <SEO title="From Darkness to Light"></SEO>
       <div className="sectioned-page">
         <section>
           <div className="container">
-            <h1>Darkness To Light</h1>
+            <h1>From Darkness To Light</h1>
             <p>
-              Below are files for the "Darkness to Light" series. Please note
-              the 2 PDF files contain 25 lessons each. Part 1 is for "Darkness"
-              and part 2 is for "Light." Beneath the PDFs are PowerPoints for
-              each lesson. Please feel free to use any of this material for your
-              bible studies.
+              Below are files for the "From Darkness to Light" series. Please
+              note the 2 PDF files contain 25 lessons each. Part 1 is for "From
+              Darkness" and part 2 is for "Light." Beneath the PDFs are
+              PowerPoints for each lesson. Please feel free to use any of this
+              material for your bible studies.
             </p>
             <h2 style={{ fontWeight: 200 }}>PDFs</h2>
             {pdfData.map(pdf => (
@@ -100,7 +100,7 @@ export default () => {
         </section>
         <section>
           <div className="container">
-            <h2 style={{ fontWeight: 200 }}>Darkness</h2>
+            <h2 style={{ fontWeight: 200 }}>From Darkness</h2>
             {darknessData.map(darkness => (
               <DownloadItem key={darkness.id} {...darkness}></DownloadItem>
             ))}
@@ -108,7 +108,7 @@ export default () => {
         </section>
         <section>
           <div className="container">
-            <h2 style={{ fontWeight: 200 }}>Light</h2>
+            <h2 style={{ fontWeight: 200 }}>To Light</h2>
             {lightData.map(light => (
               <DownloadItem key={light.id} {...light}></DownloadItem>
             ))}

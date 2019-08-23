@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa"
 
 import styles from "./SearchBar.module.css"
 
-export default ({ searchValue, setSearchValue }) => {
+export default ({ searchValue, setSearchValue, placeholder }) => {
   const handleSearchChange = event => {
     setSearchValue(event.target.value)
   }
@@ -16,7 +16,7 @@ export default ({ searchValue, setSearchValue }) => {
         type="search"
         name="searchBar"
         id="searchBar"
-        placeholder="Search"
+        placeholder={placeholder}
         value={searchValue}
         onChange={handleSearchChange}
       />

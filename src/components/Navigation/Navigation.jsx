@@ -35,7 +35,7 @@ export default ({ opened }) => {
             </div>
           </li>
         </Link>
-        <Link className="no-style" to="/sermon-material">
+        <Link className="no-style" to="/preacher-material">
           <li>
             <div className="container">
               <span>Preacher Material</span>

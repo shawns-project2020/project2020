@@ -6,10 +6,10 @@ import SEO from "../components/seo"
 import DownloadItem from "../components/DownloadItem/DownloadItem"
 import SearchBar from "../components/SearchBar/SearchBar"
 
-const ResourcesPage = () => {
+const PreacherMaterialPage = () => {
   const results = useStaticQuery(graphql`
-    query ResourceFiles {
-      allFile(filter: { sourceInstanceName: { eq: "resources" } }) {
+    query SermonFiles {
+      allFile(filter: { sourceInstanceName: { eq: "sermons" } }) {
         edges {
           node {
             id
@@ -22,7 +22,7 @@ const ResourcesPage = () => {
 
   const [searchValue, setSearchValue] = useState("")
 
-  const allResources = results.allFile.edges.map(({ node }) => {
+  const allPreacherMaterials = results.allFile.edges.map(({ node }) => {
     return {
       name: node.relativePath,
       href: `content/resources/${node.relativePath}`,
@@ -30,27 +30,27 @@ const ResourcesPage = () => {
     }
   })
 
-  const resources = allResources.filter(r =>
+  const preacherMaterial = allPreacherMaterials.filter(r =>
     r.name.toLowerCase().includes(searchValue.toLowerCase())
   )
 
   return (
     <Layout>
-      <SEO title="Resources" />
+      <SEO title="Preacher Material" />
       <div className="container">
-        <h1>Resources</h1>
+        <h1>Preacher Material</h1>
         <SearchBar
           searchValue={searchValue}
           setSearchValue={setSearchValue}
-          placeholder="Search resources"
+          placeholder="Search preacher material"
         ></SearchBar>
         <h2 style={{ fontWeight: 200 }}>Files</h2>
-        {resources.map(resource => (
-          <DownloadItem key={resource.id} {...resource}></DownloadItem>
+        {preacherMaterial.map(material => (
+          <DownloadItem key={material.id} {...material}></DownloadItem>
         ))}
       </div>
     </Layout>
   )
 }
 
-export default ResourcesPage
+export default PreacherMaterialPage
