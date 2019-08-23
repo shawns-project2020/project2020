@@ -100,7 +100,12 @@ export default () => {
         </section>
         <section>
           <div className="container">
-            <h2 style={{ fontWeight: 200 }}>From Darkness</h2>
+            <h2 style={{ fontWeight: 200 }}>
+              From Darkness{" "}
+              <span className="accent" style={{ fontSize: ".75em" }}>
+                PowerPoints
+              </span>
+            </h2>
             {darknessData.map(darkness => (
               <DownloadItem key={darkness.id} {...darkness}></DownloadItem>
             ))}
@@ -108,7 +113,12 @@ export default () => {
         </section>
         <section>
           <div className="container">
-            <h2 style={{ fontWeight: 200 }}>To Light</h2>
+            <h2 style={{ fontWeight: 200 }}>
+              To Light{" "}
+              <span className="accent" style={{ fontSize: ".75em" }}>
+                PowerPoints
+              </span>
+            </h2>
             {lightData.map(light => (
               <DownloadItem key={light.id} {...light}></DownloadItem>
             ))}

@@ -38,7 +38,7 @@ const IndexPage = () => (
           </p>
           <blockquote>
             Please consider looking into using our{" "}
-            <Link to="/darkness-to-life">"From Darkness to Light"</Link>{" "}
+            <Link to="/darkness-to-light">"From Darkness to Light"</Link>{" "}
             material" in your adult bible class. There are many PowerPoints and
             lessons for you to utilize.
           </blockquote>
