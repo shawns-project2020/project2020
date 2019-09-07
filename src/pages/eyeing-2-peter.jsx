@@ -20,7 +20,7 @@ export default () => {
     }
   `)
 
-  const pathToFiles = "content/bible-classes/darkness-to-light/"
+  const pathToFiles = "content/bible-classes/eyeing-2nd-peter/"
 
   const overview = results.allFile.edges
     .filter(({ node }) => node.relativePath.includes("Overview"))
