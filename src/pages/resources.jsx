@@ -32,7 +32,9 @@ const ResourcesPage = () => {
 
   const resources = allResources
     .filter(r => r.name.toLowerCase().includes(searchValue.toLowerCase()))
-    .sort()
+    .sort((a, b) => {
+      return a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+    })
 
   return (
     <Layout>
