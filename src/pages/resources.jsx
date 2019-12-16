@@ -30,9 +30,9 @@ const ResourcesPage = () => {
     }
   })
 
-  const resources = allResources.filter(r =>
-    r.name.toLowerCase().includes(searchValue.toLowerCase())
-  )
+  const resources = allResources
+    .filter(r => r.name.toLowerCase().includes(searchValue.toLowerCase()))
+    .sort()
 
   return (
     <Layout>
